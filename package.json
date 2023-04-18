@@ -1,5 +1,6 @@
 {
-  "name": "P9-front-end-dashboard",
+  "name": "Sportsee",
+  "homepage": "https://maqsse.github.io/Sportsee",
   "version": "1.0.0",
   "description": "Backend for the 9th project of the new path Front-end Developper",
   "main": "index/app.js",
@@ -7,6 +8,7 @@
   "author": "tdimnet <thomas.dimnet@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
@@ -16,6 +18,9 @@
   },
   "scripts": {
     "dev": "node_modules/.bin/nodemon app/index.js",
-    "start": "node app/index.js"
+    "start": "node app/index.js",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
